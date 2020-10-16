@@ -1,0 +1,45 @@
+version: '3.1'
+
+services:
+  wordpress:
+    image: wordpress:4.9-php7.2-apache
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_AUTH_KEY: 13b6557df6ffb04597bb7e2d9a553eda15a32eed
+      WORDPRESS_SECURE_AUTH_KEY: 3e4c2af51f8db705e861c4834c3281e13b52044a
+      WORDPRESS_LOGGED_IN_KEY: b63a3edab8b761e1f5f848b855eebb22f934547b
+      WORDPRESS_NONCE_KEY: 9fa8a159fb9f292e2bd90b4f7759ff2b11d5cb2d
+      WORDPRESS_AUTH_SALT: 91ab2798b65998b9cbf0c63f4ea985d87921e4e3
+      WORDPRESS_SECURE_AUTH_SALT: a54399d8c079f6308f926e7e13993f20089f4a6c
+      WORDPRESS_LOGGED_IN_SALT: b452f210e759fffae9dae43e8a61119fa4b0236c
+      WORDPRESS_NONCE_SALT: 81281f8a9380de3c4fed7218d1806a376b369918
+    volumes:
+      - wordpress:/var/www/html
+      - ${PWD}:/var/www/html/wp-content/plugins/alecaddd-plugin
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_USER: exampleuser
+      MYSQL_PASSWORD: examplepass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db:/var/lib/mysql
+    expose:
+      - "3306"
+
+volumes:
+  wordpress:
+  db:

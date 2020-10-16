@@ -20,11 +20,22 @@ class ComposerStaticInit51b523f56e298134d109fbc73bbc4aba
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'j' => 
+        array (
+            'johnpbloch\\Composer\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/johnpbloch/wordpress-core-installer/src',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit51b523f56e298134d109fbc73bbc4aba::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit51b523f56e298134d109fbc73bbc4aba::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit51b523f56e298134d109fbc73bbc4aba::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

@@ -35,18 +35,24 @@ class AdminCallbacks extends BaseController
 
 	public function alecadddAdminSection()
 	{
-		echo 'Check this beautiful section!';
+		echo 'Que Largo esta esto!';
 	}
 
 	public function alecadddTextExample()
 	{
 		$value = esc_attr( get_option( 'text_example' ) );
-		echo '<input type="text" class="regular-text" name="text_example" value="' . $value . '" placeholder="Write Something Here!">';
+		echo '<input type="text" class="regular-text" name="text_example" value="' . $value . '" placeholder="Dime tu!">';
 	}
 
 	public function alecadddFirstName()
 	{
 		$value = esc_attr( get_option( 'first_name' ) );
-		echo '<input type="text" class="regular-text" name="first_name" value="' . $value . '" placeholder="Write your First Name">';
+		echo '<input type="text" class="regular-text" name="first_name" value="' . $value . '" placeholder="Quien es el pinguo?">';
+	}
+
+	public function alecadddQouteoftheDay()
+	{
+		$value = esc_attr( get_option( 'qoute_of_the_day' ) );
+		echo '<input type="text" class="regular-text" name="qoute_of_the_day" value="' . $value . '" placeholder="Que bola?">';
 	}
 }

@@ -119,7 +119,7 @@ class Admin extends BaseController
 		$args = array(
 			array(
 				'id' => 'text_example',
-				'title' => 'Text Example',
+				'title' => 'Y entonces? ',
 				'callback' => array( $this->callbacks, 'alecadddTextExample' ),
 				'page' => 'alecaddd_plugin',
 				'section' => 'alecaddd_admin_index',
@@ -136,6 +136,17 @@ class Admin extends BaseController
 				'section' => 'alecaddd_admin_index',
 				'args' => array(
 					'label_for' => 'first_name',
+					'class' => 'example-class'
+				)
+			),
+			array(
+				'id' => 'qout_of_the_day',
+				'title' => 'Dime tu!',
+				'callback' => array( $this->callbacks, 'alecadddQouteoftheDay' ),
+				'page' => 'alecaddd_plugin',
+				'section' => 'alecaddd_admin_index',
+				'args' => array(
+					'label_for' => 'qout_of_the_day',
 					'class' => 'example-class'
 				)
 			)

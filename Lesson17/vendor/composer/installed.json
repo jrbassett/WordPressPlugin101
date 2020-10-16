@@ -1,1 +1,137 @@
-[]
+[
+    {
+        "name": "johnpbloch/wordpress",
+        "version": "4.9.15",
+        "version_normalized": "4.9.15.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/johnpbloch/wordpress.git",
+            "reference": "da74b696e8faaff32960dcac1c0d9f55e48cf960"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/da74b696e8faaff32960dcac1c0d9f55e48cf960",
+            "reference": "da74b696e8faaff32960dcac1c0d9f55e48cf960",
+            "shasum": ""
+        },
+        "require": {
+            "johnpbloch/wordpress-core": "4.9.15",
+            "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
+            "php": ">=5.6.20"
+        },
+        "time": "2020-06-10T22:04:53+00:00",
+        "type": "package",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "WordPress Community",
+                "homepage": "http://wordpress.org/about/"
+            }
+        ],
+        "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
+        "homepage": "http://wordpress.org/",
+        "keywords": [
+            "blog",
+            "cms",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "johnpbloch/wordpress-core",
+        "version": "4.9.15",
+        "version_normalized": "4.9.15.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/johnpbloch/wordpress-core.git",
+            "reference": "df9a66e96fc1eaefc1e76b6cdb5d6e3bbeb015e9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/df9a66e96fc1eaefc1e76b6cdb5d6e3bbeb015e9",
+            "reference": "df9a66e96fc1eaefc1e76b6cdb5d6e3bbeb015e9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "provide": {
+            "wordpress/core-implementation": "4.9.15"
+        },
+        "time": "2020-06-10T22:04:49+00:00",
+        "type": "wordpress-core",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "WordPress Community",
+                "homepage": "https://wordpress.org/about/"
+            }
+        ],
+        "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
+        "homepage": "https://wordpress.org/",
+        "keywords": [
+            "blog",
+            "cms",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "johnpbloch/wordpress-core-installer",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
+            "reference": "237faae9a60a4a2e1d45dce1a5836ffa616de63e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/237faae9a60a4a2e1d45dce1a5836ffa616de63e",
+            "reference": "237faae9a60a4a2e1d45dce1a5836ffa616de63e",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0 || ^2.0",
+            "php": ">=5.6.0"
+        },
+        "conflict": {
+            "composer/installers": "<1.0.6"
+        },
+        "require-dev": {
+            "composer/composer": "^1.0 || ^2.0",
+            "phpunit/phpunit": ">=5.7.27"
+        },
+        "time": "2020-04-16T21:44:57+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "johnpbloch\\Composer\\WordPressCorePlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "johnpbloch\\Composer\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "John P. Bloch",
+                "email": "me@johnpbloch.com"
+            }
+        ],
+        "description": "A custom installer to handle deploying WordPress with composer",
+        "keywords": [
+            "wordpress"
+        ]
+    }
+]
